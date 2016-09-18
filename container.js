@@ -1,9 +1,12 @@
 const container = require('@xudong/container');
+const createError = require('http-errors');
+const httpAssert = require('http-assert');
+const statuses = require('statuses');
 const accepts = require('accepts');
 const Cookies = require('cookies');
 
 container.set('assert', function () {
-  return require('accepts');
+  return httpAssert;
 });
 
 container.set('throw', function () {

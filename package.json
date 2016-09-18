@@ -1,0 +1,36 @@
+{
+  "name": "@xudong/koa-container",
+  "version": "0.0.1",
+  "description": "Dependency injection container for Koa.",
+  "main": "container.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@xudong/container": "^0.1.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xudongcc/koa-container.git"
+  },
+  "keywords": [
+    "koa",
+    "container",
+    "dependency",
+    "injection",
+    "di",
+    "ioc"
+  ],
+  "author": {
+    "name": "xudong.cc",
+    "email": "i@xudong.cc"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xudongcc/koa-container/issues"
+  },
+  "homepage": "https://github.com/xudongcc/koa-container#readme"
+}

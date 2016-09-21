@@ -110,7 +110,7 @@ container.alias('ip', 'request.ip');
 
 module.exports = function (app) {
   app.createContext = function (req, res) {
-    const context = container.clone();
+    const context = Object.create(this.context);
     const request = context.request = Object.create(this.request);
     const response = context.response = Object.create(this.response);
     context.app = request.app = response.app = this;
@@ -127,10 +127,6 @@ module.exports = function (app) {
     });
     context.accept = request.accept = accepts(req);
     context.state = {};
-
-    context.body = function (response) {
-      return response.body;
-    };
     return context;
   }
 };

@@ -128,5 +128,7 @@ module.exports = function (app) {
     context.accept = request.accept = accepts(req);
     context.state = {};
     return context;
-  }
+  };
+
+  return container;
 };

@@ -110,7 +110,7 @@ container.alias('ip', 'request.ip');
 
 module.exports = function (app) {
   app.createContext = function (req, res) {
-    const context = Object.create(this.context);
+    const context = container.clone();
     const request = context.request = Object.create(this.request);
     const response = context.response = Object.create(this.response);
     context.app = request.app = response.app = this;
